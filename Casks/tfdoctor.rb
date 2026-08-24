@@ -4,24 +4,24 @@ cask "tfdoctor" do
 
   on_macos do
     on_arm do
-      sha256 "77cd0a81028c70933c55ac23f0c7578e6f9040b9d25ad82d2932135ca734af8d"
+      sha256 "71b86405f9f97fb89548c1cc2625775f6f1c5540a3d5c4a74bb5188e83033fd9"
       url "https://github.com/ojarosch/tfdoctor/releases/download/v#{version}/tfdoctor_#{version}_darwin_arm64.tar.gz",
         verified: "github.com/ojarosch/tfdoctor"
     end
     on_intel do
-      sha256 "6c4149243955f90869a315abeb26e3a2bf79d3586c0842d0b0b02179f5959085"
+      sha256 "84d263c543c6b768883741259015c56570e9f6074940be56450f1b53af3f0fa0"
       url "https://github.com/ojarosch/tfdoctor/releases/download/v#{version}/tfdoctor_#{version}_darwin_amd64.tar.gz",
         verified: "github.com/ojarosch/tfdoctor"
     end
   end
   on_linux do
     on_arm do
-      sha256 "1a384e376381c132460f9394b3baef3718e38539fb1b2c4d9d50ea8f35df3e8a"
+      sha256 "d72ca6be406e3b1f4be4636b404ebec7ceecfa79aae7477875911d242323894d"
       url "https://github.com/ojarosch/tfdoctor/releases/download/v#{version}/tfdoctor_#{version}_linux_arm64.tar.gz",
         verified: "github.com/ojarosch/tfdoctor"
     end
     on_intel do
-      sha256 "fd0565a5e41db981a77ae7ce5b57afb3ba37e3d1af1d859f62d093e49cedb0a6"
+      sha256 "75e27a74c6542b1ae1d3368a839c12fa04ce8de4bd86775e69fee900347407a5"
       url "https://github.com/ojarosch/tfdoctor/releases/download/v#{version}/tfdoctor_#{version}_linux_amd64.tar.gz",
         verified: "github.com/ojarosch/tfdoctor"
     end
@@ -36,6 +36,12 @@ cask "tfdoctor" do
   end
 
   binary "tfdoctor"
+
+  postflight do
+    if OS.mac?
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/tfdoctor"]
+    end
+  end
 
   # No zap stanza required
 end
