@@ -5,7 +5,7 @@
 class RcloneOrbit < Formula
   desc "Rclone-backed rclone orbit daemon with TUI setup"
   homepage "https://github.com/ojarosch/rclone-orbit"
-  version "1.0.3"
+  version "1.0.4"
   license "MIT"
 
   depends_on "fswatch" => :optional
@@ -13,16 +13,16 @@ class RcloneOrbit < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ojarosch/rclone-orbit/releases/download/v1.0.3/rclone-orbit_1.0.3_darwin_x86_64.tar.gz"
-      sha256 "93aaaf67b9f9cc52b918da1be8ab19a0c59f69dd2dec8da59c918cdf16fa5744"
+      url "https://github.com/ojarosch/rclone-orbit/releases/download/v1.0.4/rclone-orbit_1.0.4_darwin_x86_64.tar.gz"
+      sha256 "c227f50ca103be3730282a71116551cdc612b8dbba698e7201a27849dc80f79c"
 
       define_method(:install) do
         bin.install "rclone-orbit"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ojarosch/rclone-orbit/releases/download/v1.0.3/rclone-orbit_1.0.3_darwin_arm64.tar.gz"
-      sha256 "f5c6346007e32775996c982fc6c00cf2287cd5f037d99364c12dae91f3a91eaf"
+      url "https://github.com/ojarosch/rclone-orbit/releases/download/v1.0.4/rclone-orbit_1.0.4_darwin_arm64.tar.gz"
+      sha256 "0df1aefdced3781e77fe7981e42d43ca69d671bf6896845c757c0d25f87002b4"
 
       define_method(:install) do
         bin.install "rclone-orbit"
@@ -32,15 +32,15 @@ class RcloneOrbit < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ojarosch/rclone-orbit/releases/download/v1.0.3/rclone-orbit_1.0.3_linux_x86_64.tar.gz"
-      sha256 "a1b1435d131b897ac1da1198dc8bb0d01634fff95c5a241c7c5619172f0fe87c"
+      url "https://github.com/ojarosch/rclone-orbit/releases/download/v1.0.4/rclone-orbit_1.0.4_linux_x86_64.tar.gz"
+      sha256 "0449f3de8c3d07d0e9cc8639586eb40beabfc20dda65bd9474d6200ce9f39c7a"
       define_method(:install) do
         bin.install "rclone-orbit"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ojarosch/rclone-orbit/releases/download/v1.0.3/rclone-orbit_1.0.3_linux_arm64.tar.gz"
-      sha256 "da74170e36a345c9483e506e6f63208545e42d27ad560eb9b2b968b72df63057"
+      url "https://github.com/ojarosch/rclone-orbit/releases/download/v1.0.4/rclone-orbit_1.0.4_linux_arm64.tar.gz"
+      sha256 "7f7bc0ce793876550aa284af4c296c8c907dc91ec02a7d91311511b132cda371"
       define_method(:install) do
         bin.install "rclone-orbit"
       end
