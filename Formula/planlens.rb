@@ -5,21 +5,21 @@
 class Planlens < Formula
   desc "Reviewer-oriented semantic diff for Terraform/OpenTofu plans"
   homepage "https://github.com/ojarosch/planlens"
-  version "0.2.2"
+  version "0.2.4"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ojarosch/planlens/releases/download/v0.2.2/planlens_0.2.2_Darwin_x86_64.tar.gz"
-      sha256 "ba3fe23a8bf26ea4db483717601d9155f4f065f7d364327f2f9b8b53eda4e2cf"
+      url "https://github.com/ojarosch/planlens/releases/download/v0.2.4/planlens_0.2.4_Darwin_x86_64.tar.gz"
+      sha256 "6661a5df61d9a00916362b319b978dd3941a9c7c6d041203d929d832ff06fac2"
 
       define_method(:install) do
         bin.install "planlens"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ojarosch/planlens/releases/download/v0.2.2/planlens_0.2.2_Darwin_aarch64.tar.gz"
-      sha256 "82b7dd90d7be3487a2600045df2b92b500ca7de0bd38a5986ceb52051db1398b"
+      url "https://github.com/ojarosch/planlens/releases/download/v0.2.4/planlens_0.2.4_Darwin_aarch64.tar.gz"
+      sha256 "03ea426898eebac27f64dcd62b6c1d697d500e67b291bb865a71617809afa1d4"
 
       define_method(:install) do
         bin.install "planlens"
@@ -29,15 +29,15 @@ class Planlens < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ojarosch/planlens/releases/download/v0.2.2/planlens_0.2.2_Linux_x86_64.tar.gz"
-      sha256 "b40a9b4d15ab0857fd3f5d810edcc79cebaf43caa53754550589cdc9b03b3d8c"
+      url "https://github.com/ojarosch/planlens/releases/download/v0.2.4/planlens_0.2.4_Linux_x86_64.tar.gz"
+      sha256 "9f8c0ced58831be711ac90b8ac02825a4b04033ddc24450691e419220f0052d9"
       define_method(:install) do
         bin.install "planlens"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ojarosch/planlens/releases/download/v0.2.2/planlens_0.2.2_Linux_aarch64.tar.gz"
-      sha256 "05e6cd701423b07aaaa9eca465605342a51195a9631c3be2c97bbbc559a3273a"
+      url "https://github.com/ojarosch/planlens/releases/download/v0.2.4/planlens_0.2.4_Linux_aarch64.tar.gz"
+      sha256 "a82d7957d7eb159c68c5fd571d17fa92647b9016e1e7a185c17e83eb23df474b"
       define_method(:install) do
         bin.install "planlens"
       end
