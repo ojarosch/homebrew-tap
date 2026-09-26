@@ -5,21 +5,21 @@
 class Iacbom < Formula
   desc "Bill of Materials for Terraform and OpenTofu repositories"
   homepage "https://github.com/ojarosch/iacbom"
-  version "0.1.3"
+  version "0.1.5"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ojarosch/iacbom/releases/download/v0.1.3/iacbom_0.1.3_darwin_amd64.tar.gz"
-      sha256 "3f7f53cb4b7c8d0e2f84862d5e2fa6a960d0c560fea3e84b46d3d55df8852374"
+      url "https://github.com/ojarosch/iacbom/releases/download/v0.1.5/iacbom_0.1.5_darwin_amd64.tar.gz"
+      sha256 "8a0554f2fc936e407cf19f720f15b7269a00f672b617e257d666e6ef75d1db14"
 
       define_method(:install) do
         bin.install "iacbom"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ojarosch/iacbom/releases/download/v0.1.3/iacbom_0.1.3_darwin_arm64.tar.gz"
-      sha256 "c380d35ecd1cbb752de452ad68a0e70e72e3fd69514159ab76b9ea3375a73894"
+      url "https://github.com/ojarosch/iacbom/releases/download/v0.1.5/iacbom_0.1.5_darwin_arm64.tar.gz"
+      sha256 "9fc0e3ee98adb7e3cab1f20e1741d9920814b1ec97edc7bb2a490abae074077b"
 
       define_method(:install) do
         bin.install "iacbom"
@@ -29,15 +29,15 @@ class Iacbom < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ojarosch/iacbom/releases/download/v0.1.3/iacbom_0.1.3_linux_amd64.tar.gz"
-      sha256 "9be756740c57a3a4ab4f72781e6e2e13f0d8ee08522a87193205ad04d4cad23f"
+      url "https://github.com/ojarosch/iacbom/releases/download/v0.1.5/iacbom_0.1.5_linux_amd64.tar.gz"
+      sha256 "25dd0d3ef52d722b1c72ccbc2daaa430e2aebc321fc78a24abda3a21e04ffec8"
       define_method(:install) do
         bin.install "iacbom"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ojarosch/iacbom/releases/download/v0.1.3/iacbom_0.1.3_linux_arm64.tar.gz"
-      sha256 "ccf71171c1885f307e95f144ff37bbf88eb84a714693dbbb4b9846bc7e31bc54"
+      url "https://github.com/ojarosch/iacbom/releases/download/v0.1.5/iacbom_0.1.5_linux_arm64.tar.gz"
+      sha256 "549101a048ad18a554ddccee870e585430fb999ee3fe9b13202d4434163030f0"
       define_method(:install) do
         bin.install "iacbom"
       end
