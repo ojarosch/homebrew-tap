@@ -5,21 +5,21 @@
 class Tfdoctor < Formula
   desc "Check the engineering hygiene of a Terraform/OpenTofu repository"
   homepage "https://github.com/ojarosch/tfdoctor"
-  version "0.1.5"
+  version "0.1.7"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ojarosch/tfdoctor/releases/download/v0.1.5/tfdoctor_0.1.5_darwin_amd64.tar.gz"
-      sha256 "ec6fcc04ac64ad1be40fae8816465df070fa4fcff61750397f030fe6b60080a7"
+      url "https://github.com/ojarosch/tfdoctor/releases/download/v0.1.7/tfdoctor_0.1.7_darwin_amd64.tar.gz"
+      sha256 "9132a5896bef9ffb3f14f86b4884da56fa476c22c47980141bddb2f0011f2fb8"
 
       define_method(:install) do
         bin.install "tfdoctor"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ojarosch/tfdoctor/releases/download/v0.1.5/tfdoctor_0.1.5_darwin_arm64.tar.gz"
-      sha256 "9e220d44280f54b63a6ba5325e41cfb36b1416e4f235ced5003ccaf820acbe29"
+      url "https://github.com/ojarosch/tfdoctor/releases/download/v0.1.7/tfdoctor_0.1.7_darwin_arm64.tar.gz"
+      sha256 "87b5fb77357ad5796771afee640177cd862c946143aaa2f271f982f410c2bd2e"
 
       define_method(:install) do
         bin.install "tfdoctor"
@@ -29,15 +29,15 @@ class Tfdoctor < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ojarosch/tfdoctor/releases/download/v0.1.5/tfdoctor_0.1.5_linux_amd64.tar.gz"
-      sha256 "65f37919a01a975f03137eb7b7b80fc566bb571e2e44515c5c62d4f07086c312"
+      url "https://github.com/ojarosch/tfdoctor/releases/download/v0.1.7/tfdoctor_0.1.7_linux_amd64.tar.gz"
+      sha256 "41b0e0654f9526c6f982e42a2c21de7745385cf6a8ae5f4353256a2524aa6043"
       define_method(:install) do
         bin.install "tfdoctor"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ojarosch/tfdoctor/releases/download/v0.1.5/tfdoctor_0.1.5_linux_arm64.tar.gz"
-      sha256 "6e89d798a34c332d1c1bd8050a8337b13a140ec3045d082b3ffd95fa3d5b6ddd"
+      url "https://github.com/ojarosch/tfdoctor/releases/download/v0.1.7/tfdoctor_0.1.7_linux_arm64.tar.gz"
+      sha256 "2bc1b0fb5137b0b95f6b1f96bcd7638542ad87d89b7d07d2bd05b669e479eb14"
       define_method(:install) do
         bin.install "tfdoctor"
       end
